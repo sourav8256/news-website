@@ -40,7 +40,7 @@ $.ajax({
                 '</div>' +
                 '<div class="card-action">' +
                 `<a href="${element.url}">See more...</a>` +
-                '</div>' +
+                '</div>'  +
                 '</div>' +
                 '</div>' +
                 '</div>' 
