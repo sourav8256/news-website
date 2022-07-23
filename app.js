@@ -13,17 +13,17 @@ API KEY = "8abd4d0e9b664890b45eb4c1d427c23e";
 
 $.ajax({
     type: 'GET',
-    url: 'https://newsapi.org/v2/everything?q=news&sortBy=publishedAt&apiKey=8abd4d0e9b664890b45eb4c1d427c23e',
+    url: 'https://newsdata.io/api/1/news?apikey=pub_95107d6153607f19f9f986d60b0177635017',
     data: { get_param: 'articles' },
     dataType: 'json',
     success: function (data) {
         console.log(data);
-        $.each(data.articles, function (index, element) {
+        $.each(data.results.articles, function (index, element) {
             /* $('.container').append($('<div>', {
                 text: element.title
             })); */
 
-            if(element.urlToImage == null){
+            if(element.image_url == null){
                 return;
             }
 
@@ -31,7 +31,7 @@ $.ajax({
                 '<div class="col s12 m7">' +
                 '<div class="card horizontal">' +
                 '<div class="card-image">' +
-                `<img src="${element.urlToImage}">` +
+                `<img src="${element.image_url}">` +
                 '</div>' +
                 '<div class="card-stacked">' +
                 '<div class="card-content">' +
@@ -39,7 +39,7 @@ $.ajax({
                 `<p>${element.description}</p>` +
                 '</div>' +
                 '<div class="card-action">' +
-                `<a href="${element.url}">See more...</a>` +
+                `<a href="${element.link}">See more...</a>` +
                 '</div>'  +
                 '</div>' +
                 '</div>' +
