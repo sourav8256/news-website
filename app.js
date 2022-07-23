@@ -13,7 +13,7 @@ API KEY = "8abd4d0e9b664890b45eb4c1d427c23e";
 
 $.ajax({
     type: 'GET',
-    url: 'https://newsdata.io/api/1/news?apikey=pub_95107d6153607f19f9f986d60b0177635017',
+    url: 'https://newsdata.io/api/1/news?apikey=pub_95107d6153607f19f9f986d60b0177635017&language=en',
     data: { get_param: 'articles' },
     dataType: 'json',
     success: function (data) {
